@@ -1,0 +1,115 @@
+#root{
+    height:100%;
+}
+.kn-layout{
+    height:100%; background: #edf0f5;
+    &-sider{
+        background-color: #fff !important; padding:0px; border-right: 1px solid #eceff5; box-shadow: 0px 2px 4px rgba(13, 30, 47, 0.04);
+        .ant-layout-sider-children{
+            display: flex; flex-direction: column;
+        }
+        .logo{
+            height:70px; position: relative; overflow: hidden; display: flex;
+            align-items: center; justify-content: center; font-size: 30px;
+        }
+        .sider-menus{
+            flex:1; overflow-y: auto; position: relative; padding:20px 0;
+            .ant-menu{
+                border-right: 0;
+            }
+        }
+    }
+    &-header{
+        background-color: #fff !important; height: 70px; line-height: 70px; padding: 0 12px 0 0; box-shadow: 4px 0px 6px rgba(31, 30, 47, 0.06); display: flex; justify-content: space-between;
+        .header-menu{
+            display: flex;
+            .button-menu{
+                height:70px; padding:0 0.75rem; color:#7081b9; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            }
+            .toggle-menu{
+                width: 60px; text-align: center;
+                .anticon{
+                    font-size: 18px;
+                }
+            }
+            .message-menu{
+                .anticon{
+                    font-size: 22px; color:#7081b9;
+                }
+                .ant-badge-count{
+                    border: 2px solid rgba(255,255,255,0.6); padding: 0; line-height: 18px;
+                }
+            }
+
+            .user-menu{
+                .avatar{
+                    display: block; width:36px; height:36px; border-radius: 50%; overflow: hidden;
+                    background-color: #edf0f5;
+                }
+                .name{
+                    margin: 0 6px;
+                }
+                .anticon-down{
+                    font-size: 10px;
+                }
+            }
+            .dropdown-toggle{
+                position: relative;
+                .dropdown-menus{
+                    display: none; position: absolute; right:0; background-color: #fff; width: 160px; top:69px; box-shadow: 0 3px 12px rgba(1, 17, 35, 0.03); border: 1px solid rgba(0,0,0,0.1); border-radius: 0.25rem; padding:10px 0;
+                    .dorpdown-item{
+                        display: block; height:40px; line-height: 40px; color:#000444; padding:0 24px;
+                        &:hover{
+                            background-color: #f1f5fa;
+                        }
+                    }
+                }
+                &:hover{
+                    .dropdown-menus{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &-content{
+        padding: 0 20px 10px;
+    }
+    &-footer{
+        padding: 20px; color:#7081b9; border-top:1px solid #e8ebf3;
+        a{
+            color:#7081b9;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// 面包屑导航
+.kn-beardcrumb{
+    display: flex; justify-content: space-between; padding:25px 0;line-height: 20px; color: #303e67;
+    .page-title{
+        font-size: 16px;
+    }
+    .ant-breadcrumb{
+        line-height: 20px;
+        a{
+            color: #303e67;
+            &:hover{
+                color:#506ee4;
+            }
+        }
+        & > span:last-child{
+            color:#506ee4;
+        }
+    }
+}
+
+.kn-card{
+    box-shadow: 0px 2px 4px rgba(31, 30, 47, 0.1);
+    margin-bottom: 24px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 1.25rem;
+}

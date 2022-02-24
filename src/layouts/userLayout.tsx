@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'umi';
+import React from 'react'
+import { Helmet } from 'umi'
 
 const UserLayout: React.FC = (props: any) => {
-    const children = props.children;
+    const children = props.children
     return (
         <div className="page-auth">
             <Helmet>
@@ -19,4 +19,4 @@ const UserLayout: React.FC = (props: any) => {
     )
 }
 
-export default UserLayout;
+export default UserLayout
