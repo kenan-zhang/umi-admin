@@ -22,6 +22,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-layout": "^6.5.0",
+    "@antv/g2plot": "^2.4.8",
     "@types/nprogress": "^0.2.0",
     "nprogress": "^0.2.0",
     "react": "17.x",

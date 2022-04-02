@@ -7,9 +7,9 @@ const Beardcrumb: React.FC = () => {
             <div className='page-title'>控制台</div>
             <Breadcrumb>
                 <Breadcrumb.Item>
-                    <a href='/home'>Home</a>
+                    <a href='/home'>首页</a>
                 </Breadcrumb.Item>
-                <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
+                <Breadcrumb.Item>控制台</Breadcrumb.Item>
             </Breadcrumb>
         </div>
     )

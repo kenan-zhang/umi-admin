@@ -1,15 +1,49 @@
 import React from 'react';
-import { Badge } from 'antd';
+import { Link } from 'umi';
+import { Badge, Input, Popover, Button } from 'antd';
 import { MenuFoldOutlined, BellOutlined, DownOutlined } from '@ant-design/icons';
 
+const { Search } = Input;
+
 const Header: React.FC = () => {
+
+    const messageContent = (
+        <div className='kn-popover-message'>
+            <div className='title'>消息通知</div>
+            <div className='cont'>
+                <div className="list">
+                    <a href="#" className='item'>
+                        <span className="text">无影云电脑3月专场特惠，云桌面低至1元起！</span>
+                        <span className='time'>2022年3月30日 07:44:00</span>
+                    </a>
+                    <a href="#" className='item'>
+                        <span className="text">无影云电脑3月专场特惠，云桌面低至1元起！</span>
+                        <span className='time'>2022年3月30日 07:44:00</span>
+                    </a>
+                    <a href="#" className='item'>
+                        <span className="text">无影云电脑3月专场特惠，云桌面低至1元起！</span>
+                        <span className='time'>2022年3月30日 07:44:00</span>
+                    </a>
+                </div>
+                <Link to='/' className='more'>查看更多</Link>
+            </div>
+        </div>
+    )
+
     return (
         <>
             <div className='header-menu'>
                 <div className='button-menu toggle-menu'><MenuFoldOutlined /></div>
+                <div className='header-search'>
+                    <Search allowClear placeholder='搜索'/>
+                </div>
             </div>
-            <div className='header-menu float-right'>
-                <div className='button-menu message-menu'><Badge count={5}><BellOutlined /></Badge></div>
+            <div className='header-menu'>
+                <div className='button-menu message-menu'>
+                    <Popover overlayClassName="kn-popover-message" placement="bottomRight" content={messageContent} title={null} trigger="hover">
+                        <Badge count={5}><BellOutlined /></Badge>
+                    </Popover>
+                </div>
                 <div className='dropdown-toggle'>
                     <div className="user-menu button-menu">
                         <span className="avatar"></span>

@@ -19,7 +19,8 @@ export default defineConfig({
     proxy: proxy,
     routes: routes,
     theme: {
-        '@primary-color': '#5473E8',
-        '@font-size-base': '12px',
+        'primary-color': '#506ee4',
+        'link-color': '#506ee4',
+        'font-size-base': '12px',
     }
 });
