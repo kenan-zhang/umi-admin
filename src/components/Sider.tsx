@@ -10,7 +10,7 @@ const MenuList = [
         { name: '公海', key: 'public' }
     ] },
     { name: '账户', key: 'account', icon: <SettingOutlined />, children: [
-        { name: '基本信息', key: 'info' }
+        { name: '基本资料', key: 'info' }
     ] }
 ]
 
