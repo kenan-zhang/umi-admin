@@ -16,6 +16,7 @@ const { Header, Footer, Sider, Content } = Layout;
 const SecurityLayout: React.FC = (props: any) => {
     // NProgress.start()
     const access = useAccess();
+    console.log(access);
 
     if (access.role) {
         return (

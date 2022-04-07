@@ -4,10 +4,41 @@ import { DashboardOutlined, MailOutlined, SettingOutlined } from '@ant-design/ic
 
 const { SubMenu } = Menu;
 
-const Sider: React.FC = () => {
-    const handleClick = (e: any) => {
+const MenuList = [
+    { name: '控制台', key: 'dashboard', icon: <DashboardOutlined /> },
+    { name: 'CRM', key: 'crm', icon: <SettingOutlined />, children: [
+        { name: '公海', key: 'public' }
+    ] },
+    { name: '账户', key: 'account', icon: <SettingOutlined />, children: [
+        { name: '基本信息', key: 'info' }
+    ] }
+]
 
+const Sider: React.FC = () => {
+
+    const handleClick = (e: any) => {
     }
+
+    const MenuHtml = () => {
+        let html:any = [];
+        MenuList.forEach((item: any) => {
+            let children: any = [];
+            if(!item.children){
+                html.push(<Menu.Item key={item.key} icon={item.icon}>{item.name}</Menu.Item>)
+            }else{
+                if(item.children.length == 0){
+                    children = []
+                }else{
+                    item.children.forEach((item2: any) => {
+                        children.push(<Menu.Item key={item.key + ':' + item2.key}>{item2.name}</Menu.Item>)
+                    })
+                }
+                html.push(<SubMenu key={children.length ? item.key : ''} icon={item.icon} title={item.name}>{children}</SubMenu>)
+            }
+        })
+        return html;
+    }
+    
     return (
         <>
             <div className='logo'>LOGO</div>
@@ -15,17 +46,11 @@ const Sider: React.FC = () => {
                 <Menu
                     onClick={handleClick}
                     style={{ width: 199 }}
-                    defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['sub1']}
+                    defaultSelectedKeys={['dashboard']}
+                    defaultOpenKeys={['dashboard']}
                     mode="inline"
                 >
-                    <Menu.Item key="dashboard" icon={<DashboardOutlined />}>控制台</Menu.Item>
-                    <SubMenu key="sub4" icon={<SettingOutlined />} title="Navigation Three">
-                        <Menu.Item key="9">Option 9</Menu.Item>
-                        <Menu.Item key="10">Option 10</Menu.Item>
-                        <Menu.Item key="11">Option 11</Menu.Item>
-                        <Menu.Item key="12">Option 12</Menu.Item>
-                    </SubMenu>
+                    {MenuHtml()}
                 </Menu>
             </div>
         </>

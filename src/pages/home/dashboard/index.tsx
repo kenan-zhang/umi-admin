@@ -54,7 +54,6 @@ const PageDashboard: React.FC = (props: any) => {
                     </div>
                 </Col>
                 <Col span={6}>
-                    
                     <div className='kn-card dash-card-user'>
                         <span className="icon color-success"><PayCircleOutlined /></span>
                         <span className="info">
