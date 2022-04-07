@@ -7,15 +7,15 @@ import KnSider from '@/components/Sider';
 import KnBeardcrumb from '@/components/Beardcrumb';
 
 import NProgress from 'nprogress';
+
 import 'nprogress/nprogress.css';
-import './index.less';
+import '@/assets/basic.less';
 
 const { Header, Footer, Sider, Content } = Layout;
 
 const SecurityLayout: React.FC = (props: any) => {
     // NProgress.start()
     const access = useAccess();
-    console.log(access);
 
     if (access.role) {
         return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'umi';
-import { Badge, Input, Popover, Button } from 'antd';
+import { Badge, Input, Popover } from 'antd';
 import { MenuFoldOutlined, BellOutlined, DownOutlined } from '@ant-design/icons';
 
 const { Search } = Input;

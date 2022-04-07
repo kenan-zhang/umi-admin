@@ -22,9 +22,10 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-layout": "^6.5.0",
-    "@antv/g2plot": "^2.4.8",
+    "@antv/g2plot": "^2.4.15",
     "@types/nprogress": "^0.2.0",
     "nprogress": "^0.2.0",
+    "rc-tween-one": "^3.0.4",
     "react": "17.x",
     "react-dom": "17.x",
     "umi": "^3.5.20"

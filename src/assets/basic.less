@@ -1,4 +1,4 @@
-@import '~@/assets/theme-variable.less';
+@import './theme-variable.less';
 
 #root{
     height:100%;
@@ -15,7 +15,7 @@
             align-items: center; justify-content: center; font-size: 30px;
         }
         .sider-menus{
-            flex:1; overflow-y: auto; position: relative; padding:20px 0;
+            flex:1; overflow-y: auto; position: relative; padding:20px 0; overflow-x: hidden;
             .ant-menu{
                 border-right: 0;
             }
@@ -63,6 +63,11 @@
                     position: relative;
                     .ant-input-affix-wrapper{
                         border-radius: 16px;
+                        &-focused + span{
+                            .ant-btn{
+                                background-color: #506ee4; color: #fff; border-color: #506ee4;
+                            }
+                        }
                     }
                     .ant-input-group-addon{
                         position: absolute; right:0; top:0; left:inherit; width: 32px; background-color: inherit; z-index: 1;
@@ -98,7 +103,7 @@
         }
     }
     &-content{
-        padding: 0 20px 10px;
+        padding: 0 20px 10px; min-width: 1000px; overflow-y: auto; overflow-x: hidden;
     }
     &-footer{
         padding: 20px; color:#7081b9; border-top:1px solid #e8ebf3;
@@ -138,7 +143,7 @@
     border-radius: 3px;
     padding: 1.25rem;
     .card-title{
-        margin-bottom: 8px; letter-spacing: 0.02em; font-size: 14px; font-weight: 500; color: #303e67; text-shadow: 0 0 1px rgba(26, 38, 58, 0.1); line-height: 20px;
+        margin-bottom: 16px; letter-spacing: 0.02em; font-size: 16px; font-weight: 500; color: #303e67; text-shadow: 0 0 1px rgba(26, 38, 58, 0.1); line-height: 20px;
     }
 }
 
@@ -173,5 +178,33 @@
         &:hover{
             background-color: #f1f5fa;
         }
+    }
+}
+
+// 文本颜色
+.color-warning{
+    color:#ff9f43 !important;
+}
+.color-purple{
+    color:#6d81f5 !important;
+}
+.color-success{
+    color:#2ddab5 !important;
+}
+.color-pink{
+    color:#fd3c97 !important;
+}
+
+// 表格
+.kn-table{
+    .ant-table{
+        color: #7286a2 !important;
+    }
+    .ant-table-thead > tr > th{
+        color: #303e67;
+        background-color: #f1f5fa;
+        border-top:1px solid #eaf0f7;
+        border-bottom:2px solid #eaf0f7;
+        font-size: 14px;
     }
 }

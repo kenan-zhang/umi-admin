@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { DashboardOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 
@@ -19,6 +19,7 @@ const Sider: React.FC = () => {
                     defaultOpenKeys={['sub1']}
                     mode="inline"
                 >
+                    <Menu.Item key="dashboard" icon={<DashboardOutlined />}>控制台</Menu.Item>
                     <SubMenu key="sub4" icon={<SettingOutlined />} title="Navigation Three">
                         <Menu.Item key="9">Option 9</Menu.Item>
                         <Menu.Item key="10">Option 10</Menu.Item>
