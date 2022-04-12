@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'umi';
-import { Badge, Input, Popover } from 'antd';
-import { MenuFoldOutlined, BellOutlined, DownOutlined } from '@ant-design/icons';
+import { Badge, Input, Popover, Avatar } from 'antd';
+import { MenuFoldOutlined, BellOutlined, DownOutlined, UserOutlined } from '@ant-design/icons';
 
 const { Search } = Input;
 
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className='dropdown-toggle'>
                     <div className="user-menu button-menu">
-                        <span className="avatar"></span>
+                        <span className="avatar"><UserOutlined /></span>
                         <span className="name">用户中心</span>
                         <DownOutlined />
                     </div>
