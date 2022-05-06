@@ -1,115 +1,214 @@
 @import './theme-variable.less';
 
-#root{
-    height:100%;
+#root {
+    height: 100%;
 }
-.kn-layout{
-    height:100%; background: #edf0f5;
-    &-sider{
-        background-color: #fff !important; padding:0px; border-right: 1px solid #eceff5; box-shadow: 0px 2px 4px rgba(13, 30, 47, 0.04);
-        .ant-layout-sider-children{
-            display: flex; flex-direction: column;
+
+.kn-layout {
+    height    : 100%;
+    background: #edf0f5;
+
+    &-sider {
+        background-color: #fff !important;
+        padding         : 0px;
+        border-right    : 1px solid #eceff5;
+        box-shadow      : 0px 2px 4px rgba(13, 30, 47, 0.04);
+
+        .ant-layout-sider-children {
+            display       : flex;
+            flex-direction: column;
         }
-        .logo{
-            height:70px; position: relative; overflow: hidden; display: flex;
-            align-items: center; justify-content: center; font-size: 30px;
+
+        .logo {
+            height         : 70px;
+            position       : relative;
+            overflow       : hidden;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            font-size      : 30px;
         }
-        .sider-menus{
-            flex:1; overflow-y: auto; position: relative; padding:20px 0; overflow-x: hidden;
-            .ant-menu{
+
+        .sider-menus {
+            flex      : 1;
+            overflow-y: auto;
+            position  : relative;
+            padding   : 20px 0;
+            overflow-x: hidden;
+
+            .ant-menu {
                 border-right: 0;
             }
         }
     }
-    &-header{
-        background-color: #fff !important; height: 70px; line-height: 70px; padding: 0 12px 0 0; box-shadow: 4px 0px 6px rgba(31, 30, 47, 0.06); display: flex; justify-content: space-between;
-        position: relative; z-index: 999;
-        .header-menu{
+
+    &-header {
+        background-color: #fff !important;
+        height          : 70px;
+        line-height     : 70px;
+        padding         : 0 12px 0 0;
+        box-shadow      : 4px 0px 6px rgba(31, 30, 47, 0.06);
+        display         : flex;
+        justify-content : space-between;
+        position        : relative;
+        z-index         : 999;
+
+        .header-menu {
             display: flex;
-            .button-menu{
-                height:70px; padding:0 0.75rem; color:#7081b9; cursor: pointer; display: flex; align-items: center; justify-content: center;
+
+            .button-menu {
+                height         : 70px;
+                padding        : 0 0.75rem;
+                color          : #7081b9;
+                cursor         : pointer;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
             }
-            .toggle-menu{
-                width: 60px; text-align: center;
-                .anticon{
+
+            .toggle-menu {
+                width     : 60px;
+                text-align: center;
+
+                .anticon {
                     font-size: 18px;
                 }
             }
-            .message-menu{
-                .anticon{
-                    font-size: 22px; color:#7081b9;
+
+            .message-menu {
+                .anticon {
+                    font-size: 22px;
+                    color    : #7081b9;
                 }
-                .ant-badge-count{
-                    border: 2px solid rgba(255,255,255,0.6); padding: 0; line-height: 18px;
+
+                .ant-badge-count {
+                    border     : 2px solid rgba(255, 255, 255, 0.6);
+                    padding    : 0;
+                    line-height: 18px;
                 }
             }
 
-            .user-menu{
-                .avatar{
-                    display: flex; width:36px; height:36px; border-radius: 50%; overflow: hidden;
-                    background-color: #edf0f5; align-items: center; justify-content: center; font-size: 20px;
+            .user-menu {
+                .avatar {
+                    display         : flex;
+                    width           : 36px;
+                    height          : 36px;
+                    border-radius   : 50%;
+                    overflow        : hidden;
+                    background-color: #edf0f5;
+                    align-items     : center;
+                    justify-content : center;
+                    font-size       : 20px;
                 }
-                .name{
+
+                .name {
                     margin: 0 6px;
                 }
-                .anticon-down{
+
+                .anticon-down {
                     font-size: 10px;
                 }
             }
 
-            .header-search{
-                display: flex; align-items: center;
-                .ant-input-search{
+            .header-search {
+                display    : flex;
+                align-items: center;
+
+                .ant-input-search {
                     position: relative;
-                    .ant-input-affix-wrapper{
+
+                    .ant-input-affix-wrapper {
                         border-radius: 16px;
-                        &-focused + span{
-                            .ant-btn{
-                                background-color: #506ee4; color: #fff; border-color: #506ee4;
+
+                        &-focused+span {
+                            .ant-btn {
+                                background-color: #506ee4;
+                                color           : #fff;
+                                border-color    : #506ee4;
                             }
                         }
                     }
-                    .ant-input-group-addon{
-                        position: absolute; right:0; top:0; left:inherit; width: 32px; background-color: inherit; z-index: 1;
-                        .ant-input-search-button{
-                            border-radius: 50%; background-color: #e9ecef; color: #98a9d9; font-size: 16px;
+
+                    .ant-input-group-addon {
+                        position        : absolute;
+                        right           : 0;
+                        top             : 0;
+                        left            : inherit;
+                        width           : 32px;
+                        background-color: inherit;
+                        z-index         : 1;
+
+                        .ant-input-search-button {
+                            border-radius   : 50%;
+                            background-color: #e9ecef;
+                            color           : #98a9d9;
+                            font-size       : 16px;
                         }
                     }
-                    &:hover{
-                        .ant-input-search-button{
-                            background-color: @primary-color; color:#fff; border-color: @primary-color;
+
+                    &:hover {
+                        .ant-input-search-button {
+                            background-color: @primary-color;
+                            color           : #fff;
+                            border-color    : @primary-color;
                         }
                     }
                 }
             }
 
-            .dropdown-toggle{
+            .dropdown-toggle {
                 position: relative;
-                .dropdown-menus{
-                    display: none; position: absolute; right:0; background-color: #fff; width: 160px; top:69px; box-shadow: 0 3px 12px rgba(1, 17, 35, 0.03); border: 1px solid rgba(0,0,0,0.1); border-radius: 0.25rem; padding:10px 0;
-                    .dorpdown-item{
-                        display: block; height:40px; line-height: 40px; color:#000444; padding:0 24px;
-                        &:hover{
+
+                .dropdown-menus {
+                    display         : none;
+                    position        : absolute;
+                    right           : 0;
+                    background-color: #fff;
+                    width           : 160px;
+                    top             : 69px;
+                    box-shadow      : 0 3px 12px rgba(1, 17, 35, 0.03);
+                    border          : 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius   : 0.25rem;
+                    padding         : 10px 0;
+
+                    .dorpdown-item {
+                        display    : block;
+                        height     : 40px;
+                        line-height: 40px;
+                        color      : #000444;
+                        padding    : 0 24px;
+
+                        &:hover {
                             background-color: #f1f5fa;
                         }
                     }
                 }
-                &:hover{
-                    .dropdown-menus{
+
+                &:hover {
+                    .dropdown-menus {
                         display: block;
                     }
                 }
             }
         }
     }
-    &-content{
-        padding: 0 20px 10px; min-width: 1000px; overflow-y: auto; overflow-x: hidden;
+
+    &-content {
+        padding   : 0 20px 10px;
+        min-width : 1000px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
-    &-footer{
-        padding: 20px; color:#7081b9; border-top:1px solid #e8ebf3;
-        a{
-            color:#7081b9;
-            &:hover{
+
+    &-footer {
+        padding   : 20px;
+        color     : #7081b9;
+        border-top: 1px solid #e8ebf3;
+
+        a {
+            color: #7081b9;
+
+            &:hover {
                 text-decoration: underline;
             }
         }
@@ -117,95 +216,241 @@
 }
 
 // 面包屑导航
-.kn-beardcrumb{
-    display: flex; justify-content: space-between; padding:25px 0;line-height: 20px; color: #303e67;
-    .page-title{
+.kn-beardcrumb {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 25px 0;
+    line-height    : 20px;
+    color          : #303e67;
+
+    .page-title {
         font-size: 16px;
     }
-    .ant-breadcrumb{
+
+    .ant-breadcrumb {
         line-height: 20px;
-        a{
+
+        a {
             color: #303e67;
-            &:hover{
-                color:#506ee4;
+
+            &:hover {
+                color: #506ee4;
             }
         }
-        & > span:last-child{
-            color:#506ee4;
+
+        &>span:last-child {
+            color: #506ee4;
         }
     }
 }
 
-.kn-card{
-    box-shadow: 0px 2px 4px rgba(31, 30, 47, 0.1); margin-bottom: 24px; background-color: #fff; border-radius: 3px; padding: 1.25rem;
-    .card-title{
-        margin-bottom: 16px; letter-spacing: 0.02em; font-size: 16px; font-weight: 500; color: #303e67; text-shadow: 0 0 1px rgba(26, 38, 58, 0.1); line-height: 20px;
+.kn-card {
+    box-shadow      : 0px 2px 4px rgba(31, 30, 47, 0.1);
+    margin-bottom   : 24px;
+    background-color: #fff;
+    border-radius   : 3px;
+    padding         : 1.25rem;
+
+    .card-title {
+        margin-bottom : 16px;
+        letter-spacing: 0.02em;
+        font-size     : 16px;
+        font-weight   : 500;
+        color         : #303e67;
+        text-shadow   : 0 0 1px rgba(26, 38, 58, 0.1);
+        line-height   : 20px;
     }
 }
 
 // 消息通知
-.kn-popover-message{
+.kn-popover-message {
     width: 360px;
-    .ant-popover-inner-content{
-        padding:0;
+
+    .ant-popover-inner-content {
+        padding: 0;
     }
-    .title{
-        height:50px; line-height: 50px; background-color: @primary-color; color:#fff; padding:0 24px; font-size: 14px;
+
+    .title {
+        height          : 50px;
+        line-height     : 50px;
+        background-color: @primary-color;
+        color           : #fff;
+        padding         : 0 24px;
+        font-size       : 14px;
     }
-    .cont{
+
+    .cont {
         padding: 10px 0 0;
     }
-    .list{
-        .item{
-            padding:10px 24px; display: block;
-            .text{
-                display: block; height:20px; line-height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color:#5a5c61;
+
+    .list {
+        .item {
+            padding: 10px 24px;
+            display: block;
+
+            .text {
+                display      : block;
+                height       : 20px;
+                line-height  : 20px;
+                overflow     : hidden;
+                text-overflow: ellipsis;
+                white-space  : nowrap;
+                color        : #5a5c61;
             }
-            .time{
-                display: block; color:#a4abc5;
+
+            .time {
+                display: block;
+                color  : #a4abc5;
             }
-            &:hover{
+
+            &:hover {
                 background-color: #f1f5fa;
             }
         }
     }
-    .more{
-        display: block; width: 100%; text-align: center; height:40px; line-height: 40px;
-        &:hover{
+
+    .more {
+        display    : block;
+        width      : 100%;
+        text-align : center;
+        height     : 40px;
+        line-height: 40px;
+
+        &:hover {
             background-color: #f1f5fa;
         }
     }
 }
 
 // 文本颜色
-.color-warning{
-    color:#ff9f43 !important;
+.color-warning {
+    color: @warning-color  !important;
 }
-.color-purple{
-    color:#6d81f5 !important;
+
+.color-purple {
+    color: @purple-color  !important;
 }
-.color-success{
-    color:#2ddab5 !important;
+
+.color-success {
+    color: @success-color  !important;
 }
-.color-pink{
-    color:#fd3c97 !important;
+
+.color-pink {
+    color: @pink-color  !important;
 }
 
 // 表格
-.kn-table{
-    .ant-table{
+.kn-table {
+    .ant-table {
         color: #7286a2 !important;
     }
-    .ant-table-thead > tr > th{
-        color: #303e67;
+
+    .ant-table-thead>tr>th {
+        color           : #303e67;
         background-color: #f1f5fa;
-        border-top:1px solid #eaf0f7;
-        border-bottom:2px solid #eaf0f7;
-        font-size: 14px;
+        border-top      : 1px solid #eaf0f7;
+        border-bottom   : 2px solid #eaf0f7;
+        font-size       : 14px;
     }
 }
 
 // 标签
-.ant-tag{
-    border:0 !important; border-radius: 2px !important;
+.ant-tag {
+    border       : 0 !important;
+    border-radius: 2px !important;
+    padding      : 0 3px !important;
+
+    &-volcano {
+        background-color: rgba(239, 77, 86, 0.15) !important;
+        color           : #ef4d56 !important;
+    }
+
+    &-green {
+        background-color: rgba(45, 218, 181, 0.15) !important;
+        color           : #2ddab5 !important;
+    }
+
+    &-geekblue {
+        background-color: rgba(109, 129, 245, 0.15) !important;
+        color           : #6d81f5 !important;
+    }
+}
+
+// 时间轴
+.kn-timeline {
+    .ant-timeline-item {
+        overflow: hidden;
+
+        &-head-custom {
+            top            : 22px;
+            width          : 42px;
+            height         : 42px;
+            box-shadow     : 0px 0px 2px 0.25px;
+            font-size      : 22px;
+            border         : 2px solid #fff;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            border-radius  : 50%;
+            left           : 22px;
+            padding        : 0;
+        }
+
+        &-tail {
+            left: 21px;
+            top : 44px;
+        }
+
+        &-content {
+            margin-left: 58px;
+            top        : 0;
+        }
+
+        &-head-soft-success {
+            color           : @success-color  !important;
+            background-color: rgba(45, 218, 181, 0.08) !important;
+        }
+
+        &-head-soft-pink {
+            background-color: rgba(253, 60, 151, 0.08) !important;
+            color           : @pink-color  !important;
+        }
+
+        &-head-soft-purple {
+            background-color: rgba(109, 129, 245, 0.08) !important;
+            color           : @purple-color  !important;
+        }
+
+        &-head-soft-warning {
+            background-color: rgba(255, 159, 67, 0.08) !important;
+            color           : @warning-color  !important;
+        }
+
+        &-head-soft-secondary {
+            background-color: rgba(65, 203, 216, 0.08) !important;
+            color           : @secondary-color  !important;
+        }
+    }
+
+    .timeline-item {
+        .tit {
+            font-size  : 14px;
+            color      : #303e67;
+            line-height: 1.2;
+            height     : 42px;
+            line-height: 42px;
+        }
+
+        .text {
+            color: #a4abc5;
+
+            a {
+                color: #a4abc5;
+
+                &:hover {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
 }

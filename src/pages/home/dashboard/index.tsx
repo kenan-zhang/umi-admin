@@ -81,7 +81,7 @@ const PageDashboard: React.FC = (props: any) => {
                         </div>
                     </div>
                     <div className='kn-card'>
-                        <div className='card-title'>表格</div>
+                        <div className='card-title'>潜在客户</div>
                         <div className="card-cont">
                             <DashTable />
                         </div>
@@ -89,7 +89,7 @@ const PageDashboard: React.FC = (props: any) => {
                 </Col>
                 <Col span={8}>
                     <div className='kn-card'>
-                        <div className='card-title'>时间轴</div>
+                        <div className='card-title'>任务</div>
                         <div className="card-cont">
                             <DashTimeline />
                         </div>

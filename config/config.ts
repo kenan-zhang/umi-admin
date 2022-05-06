@@ -8,7 +8,7 @@ export default defineConfig({
     history: {
         type: 'hash',
     },
-    mfsu:{},
+    // mfsu:{},
     dynamicImport: {
         loading: '@/components/Loading',
     },

@@ -1,35 +1,41 @@
 import React from 'react';
+import { Link } from 'umi';
 import { Timeline } from 'antd';
-import { SmileOutlined } from '@ant-design/icons';
+import { BugOutlined, CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 
 const DashTimeline: React.FC = () => {
     return (
         <>
-            <Timeline>
-                <Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>
-                <Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>
-                <Timeline.Item color="red">
-                    <p>Solve initial network problems 1</p>
-                    <p>Solve initial network problems 2</p>
-                    <p>Solve initial network problems 3 2015-09-01</p>
+            <Timeline className='kn-timeline'>
+                <Timeline.Item color="soft-success" dot={<CheckCircleOutlined />}>
+                    <div className='timeline-item'>
+                        <div className='tit'>任务完成</div>
+                        <div className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. <Link to=''>[详情]</Link></div>
+                    </div>
                 </Timeline.Item>
-                <Timeline.Item>
-                    <p>Technical testing 1</p>
-                    <p>Technical testing 2</p>
-                    <p>Technical testing 3 2015-09-01</p>
+                <Timeline.Item color="soft-pink" dot={<BugOutlined />}>
+                    <div className='timeline-item'>
+                        <div className='tit'>任务逾期</div>
+                        <div className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. <Link to=''>[详情]</Link></div>
+                    </div>
                 </Timeline.Item>
-                <Timeline.Item color="gray">
-                    <p>Technical testing 1</p>
-                    <p>Technical testing 2</p>
-                    <p>Technical testing 3 2015-09-01</p>
+                <Timeline.Item color="soft-purple" dot={<InfoCircleOutlined />}>
+                    <div className='timeline-item'>
+                        <div className='tit'>新任务</div>
+                        <div className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. <Link to=''>[详情]</Link></div>
+                    </div>
                 </Timeline.Item>
-                <Timeline.Item color="gray">
-                    <p>Technical testing 1</p>
-                    <p>Technical testing 2</p>
-                    <p>Technical testing 3 2015-09-01</p>
+                <Timeline.Item color="soft-warning" dot={<InfoCircleOutlined />}>
+                    <div className='timeline-item'>
+                        <div className='tit'>任务提醒</div>
+                        <div className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. <Link to=''>[详情]</Link></div>
+                    </div>
                 </Timeline.Item>
-                <Timeline.Item color="#00CCFF" dot={<SmileOutlined />}>
-                    <p>Custom color testing</p>
+                <Timeline.Item color="soft-secondary" dot={<InfoCircleOutlined />}>
+                    <div className='timeline-item'>
+                        <div className='tit'>任务进行中</div>
+                        <div className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. <Link to=''>[详情]</Link></div>
+                    </div>
                 </Timeline.Item>
             </Timeline>
         </>
